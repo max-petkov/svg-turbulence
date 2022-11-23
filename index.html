@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <title>SVG Turbulence</title>
+</head>
+
+<body>
+    <section class="hero">
+        <div class="container">
+
+            <div class="svg-wrapper">
+                <svg filter="url(#filterTurbulence)" class="svg-donut" viewBox="0 0 96 96"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <filter id="filterTurbulence">
+                            <feTurbulence baseFrequency="0.05" numOctaves="2" result="turbulence" type="turbulence" />
+                            <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="50" xChannelSelector="R"
+                                yChannelSelector="G" />
+                        </filter>
+                    </defs>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M48 80C65.6731 80 80 65.6731 80 48C80 30.3269 65.6731 16 48 16C30.3269 16 16 30.3269 16 48C16 65.6731 30.3269 80 48 80ZM48 66C57.9412 66 66 57.9411 66 48C66 38.0589 57.9412 30 48 30C38.0588 30 30 38.0589 30 48C30 57.9411 38.0588 66 48 66Z"
+                        fill="#BB86FC"/>
+                </svg>
+            </div>
+
+            <p class="hero__description">
+                <span class="text" filter="url(#textTurbulence)">Filter | Turbulence</span>
+                <svg>
+                    <defs>
+                        <filter id="textTurbulence">
+                            <feTurbulence baseFrequency="0" numOctaves="0" result="turbulence" type="turbulence" />
+                            <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="6" xChannelSelector="R"
+                                yChannelSelector="G" />
+                        </filter>
+                    </defs>
+                </svg>
+            </p>
+
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

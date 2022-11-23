@@ -1,0 +1,94 @@
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Comfortaa", cursive;
+  background-color: #292929;
+  color: #d6d6d6;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+h2 {
+  font-size: 56px;
+  line-height: 56px;
+  letter-spacing: -0.005em;
+}
+
+section {
+  --width-container: 960px;
+
+  min-height: 100vh;
+  width: 100%;
+  padding: 64px;
+}
+
+.container {
+  max-width: var(--width-container);
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Helpers */
+.d-flex {
+  display: flex;
+  align-items: center;
+}
+
+.d-flex--col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .container {
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.svg-donut {
+  visibility: hidden;
+  scale: 10;
+  width: 100%;
+  max-width: 256px;
+  transform: translate(-22px, -23px);
+}
+
+.svg-donut path {
+  box-shadow: 0 4px 4px rgb(0 0 0 / 50%);
+}
+
+.scroll-down {
+  visibility: hidden;
+  font-size: 16px;
+  letter-spacing: 2.5px;
+}
+
+.hero__description {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero__description .text {
+  visibility: hidden;
+  filter: url("#textTurbulence");
+} 
+
+.hero__description svg{
+  display: none;
+}
