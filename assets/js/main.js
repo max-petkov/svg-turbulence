@@ -11,8 +11,7 @@ function animationPageLoad() {
     defaults: { duration: 4, ease: Back.easeOut.config(0.7) },
   });
 
-  // tl.add(tlPageLoad).add(tlRepeatTurbulence, 3).add(tlshowText, 3);
-  tl.add(tlPageLoad).add(tlRepeatTurbulence, 3);
+  tl.add(tlPageLoad).add(tlRepeatTurbulence, 3).add(tlshowText, 3);
 
   function tlPageLoad() {
     return gsap
